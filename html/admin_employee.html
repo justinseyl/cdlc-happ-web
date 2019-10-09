@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CDLC</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../js/env.js"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,800" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/home.css">
+  <link rel="stylesheet" type="text/css" href="../css/survey.css">
+	<link rel="stylesheet" type="text/css" href="../css/sidebar.css">
+</head>
+<body>
+
+<div id="logout-popup" class="popup-panel" style="display:none;">
+	<div class="popup-content">
+		<div class="popup-header">Are you sure?</div><img class="close" src="../assets/icon-close.png" onclick="closepopup()">
+		<hr style="margin-left:0px!important;width:25px;">
+		<div class="popup-label">Are you sure you wish to log out?  If so please comfirm by clicking below.</div>
+		<form id="issue-form">
+			<div id="submit-issue">
+				<input type="submit" value="LOG OUT" class="popup-submit" onclick="logout()">
+				<p class="logout-text" onclick="closepopup()">I changed my mind</p>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div id="mySidebar" class="sidebar">
+	<div class="main-logo">
+	  <img src="../assets/c1.png">
+	</div>
+	<div class="menu">
+		<div class="menu-item">
+		  <i class="fa fa-home"></i><a href="admin_home.html">Home</a>
+		</div>
+		<div class="menu-item">
+		  <i class="fa fa-comment-alt"></i><a href="admin_suggestions.html">Suggestion's</a>
+		</div>
+		<div class="menu-item">
+		  <i class="fa fa-exclamation-triangle"></i><a href="admin_issue.html">Issues</a>
+		</div>
+		<div class="menu-item">
+		  <i class="fa fa-file-alt"></i><a href="admin_survey.html">Survey's</a>
+		</div>
+		<div class="menu-item active">
+		  <i class="fa fa-user"></i><span><a class="active" href="admin_employee.html">Employee's</a><hr></span>
+		</div>
+		<div class="menu-item">
+		  <i class="fa fa-book"></i><a href="admin_books.html">Books</a>
+		</div>
+
+		<div id="logout-button" class="menu-item bottom" onclick="popLogOut()">
+		  <i class="fa fa-sign-out-alt"></i><a href="#">Log Out</a>
+		</div>
+	</div>
+</div>
+
+<div id="main" class="container">
+	<div class="main-header">
+    <span id="main-header-label">
+  		<img id="sidebar-toggle" src="../assets/sidebar.svg" onclick="openNav()">
+  		<h1>Employee's<span class="after-header-admin" id="totalmploye"></span></h1>
+    </span>
+		<div class="main-header-icons-admin">
+        <select id="division" class="custom-select-admin">
+          <option value="" selected>Filter Department</option>
+					<option value="Department Manager">Department Manager</option>
+          <option value="CDL Manager">CDL Manager</option>
+          <option value="SMP Sales">SMP Sales</option>
+          <option value="Ticket Sales">Ticket Sales</option>
+          <option value="Processing">Processing</option>
+          <option value="CSA Watch">CSA Watch</option>
+          <option value="Insurance/Development">Insurance/Development</option>
+          <option value="Manager/Lead">Manager/Lead</option>
+          <option value="SMP Team">SMP Team</option>
+        </select>
+				<img class="filter-img" src="../assets/icon-filter.svg">
+				<div style="position:relative;">
+					<select id="setrole" class="custom-select-admin">
+						<option value="both" selected>Both</option>
+						<option value="manager">Manager</option>
+						<option value="user">Employee</option>
+					</select>
+					<img class="filter-img" src="../assets/icon-filter.svg">
+				</div>
+				<div class="icon" onclick="window.location.href='admin_notifications.html'">
+					<img src="../assets/notification-third.svg" style="opacity:1;">
+				</div>
+		</div>
+	</div>
+	<div class="inner-container">
+		<div class="inner-row">
+      <ul id="survey-list">
+
+      </ul>
+		</div>
+	</div>
+</div>
+
+<div id="cover" style="display:none;"></div>
+
+<script src="../js/only-logged-in.js"></script>
+<script src="../js/employee_admin.js"></script>
+<script src="../js/shared.js"></script>
+
+</body>
+</html>

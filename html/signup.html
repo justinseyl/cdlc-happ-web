@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../js/env.js"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/signup.css">
+</head>
+<body>
+<div class="container">
+	<p class="userexists" style="display:none;"> Oops, this email is already in our system. Please try <a href="login.html">logging in</a> or using the <a href="forgot.html">forgot password</a> link.</p>
+	<div class="d-flex justify-content-center h-100">
+		<div class="card-signup">
+			<div class="card-header-custom">
+				<div class="header-left">
+					<h3>Sign Up</h3>
+	        <hr class="under-line"/>
+				</div>
+				<div class="header-right">
+					<a href="login.html" class="header-button">Log In</a>
+				</div>
+			</div>
+			<div class="card-body-signup">
+				<form id="signupform">
+					<div class="input-group form-group">
+						<input id="email" type="text" class="form-control" placeholder="Email Address">
+					</div>
+					<div class="input-group form-group">
+						<input id="password" type="password" class="form-control" placeholder="Password">
+					</div>
+					<div class="input-group form-group">
+						<input id="password2" type="password" class="form-control" placeholder="Re Enter Password" onkeyup="checkPassword()">
+					</div>
+					<div class="input-group form-group">
+					  <select id="division" class="custom-select" id="divisionSelect">
+					    <option value="" selected>Please Select a Division...</option>
+							<option value="Department Manager">Department Manager</option>
+					    <option value="CDL Manager">CDL Manager</option>
+					    <option value="SMP Sales">SMP Sales</option>
+					    <option value="Ticket Sales">Ticket Sales</option>
+							<option value="Processing">Processing</option>
+							<option value="CSA Watch">CSA Watch</option>
+							<option value="Insurance/Development">Insurance/Development</option>
+							<option value="Manager/Lead">Manager/Lead</option>
+							<option value="SMP Team">SMP Team</option>
+					  </select>
+					</div>
+          <div class="terms-service">
+            <p>By creating an account you agree to the
+						<span class="link-inline"><a href="tos.html">Terms of Service</a></span>
+						 and
+						<span class="link-inline"><a href="tos.html">Privacy Policy</a></span>
+						</p>
+          </div>
+					<div class="submit-button signup">
+						<input type="submit" value="SIGN UP" class="btn login_btn" onclick="userSignUp()">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="cover"></div>
+
+<footer class="footer">
+	<div class="footer-content text-center py-3">
+		OUR COMPANIES
+	</div>
+	<div class="footer-images reg">
+		<img src="../assets/c1.png">
+		<img src="../assets/c2.png">
+		<img src="../assets/c3.png">
+		<img src="../assets/c4.png">
+	</div>
+	<div class="footer-images mob">
+		<img src="../assets/c1-mob.png">
+		<img src="../assets/c2-mob.png">
+		<img src="../assets/c3-mob.png">
+		<img src="../assets/c4-mob.png">
+	</div>
+</footer>
+
+<script src="../js/index.js"></script>
+
+</body>
+</html>

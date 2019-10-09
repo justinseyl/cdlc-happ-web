@@ -1,0 +1,92 @@
+var userid = sessionStorage.getItem('cdlc') || localStorage.getItem('cdlc');
+
+$.ajax({
+    url: environmentConfig + '/getallsurveys',
+    type: 'POST',
+    data: JSON.stringify(
+      {
+        userid: userid
+      }),
+    contentType: "application/json",
+    success: function(response) {
+      build(response);
+
+      $( "#survey-list li" ).click(function() {
+        $('#survey-list li:not(#' + this.id + ')').hide();
+        $('#main-header-label').hide();
+        $('#main-header-label-paged').show();
+        $('#survey-expanded').show();
+
+        listExp(this.id, response);
+      });
+    },
+    error: function(err){
+      console.log(err);
+    }
+});
+
+function build(response) {
+  $.each(response, function(i, item) {
+
+    var score = item.overall.split('/')[0];
+    var tot = item.overall.split('/')[1];
+
+    var calc = (score / tot).toFixed(2);
+
+    var smiles = "ok-smile";
+
+    if (calc <= 0.20) smiles = "terr-smile";
+    if (calc > 0.20 && calc <= 0.40) smiles = "bad-smile";
+    if (calc > 0.40 && calc <= 0.60) smiles = "ok-smile";
+    if (calc > 0.60 && calc <= 0.80) smiles = "good-smile";
+    if (calc > 0.80) smiles = "awe-smile";
+
+    var li = '<li id="' + item.id + '">'+
+    '          <div class="survey-headers">'+
+    '            <div class="survey-item">Name</div>'+
+    '            <div class="survey-item">Department</div>'+
+    '            <div class="survey-item">Date</div>'+
+    '            <div class="survey-item">Overall Score</div>'+
+    '          </div>'+
+    '          <div class="survey-content">'+
+    '            <div class="survey-item">' + item.name + '</div>'+
+    '            <div class="survey-item">' + item.department + '</div>'+
+    '            <div class="survey-item">' + item.date + '</div>'+
+    '            <div class="survey-item">' + item.overall + '<img src="../assets/' + smiles + '.png"></div>'+
+    '          </div>'+
+    '        </li>';
+
+
+    $('#survey-list').append(li);
+  });
+}
+
+function listExp(id, data) {
+  var q = data.find(x => x.id === id).questions;
+  $('#survey-list-expanded').empty();
+
+  $.each(q, function(i, item) {
+
+    var smiles = "ok-smile";
+    var str = item.score.split('/')[0];
+
+    if (str == 1) smiles = "terr-smile";
+    if (str == 2) smiles = "bad-smile";
+    if (str == 3) smiles = "ok-smile";
+    if (str == 4) smiles = "good-smile";
+    if (str >= 5) smiles = "awe-smile";
+
+    var li_exp = '<li>'+
+    '          <div class="survey-exp-headers">'+
+    '            <div class="survey-question"><span class="question-label">Q' + item.id + ':</span>' + item.question + '</div>'+
+    '            <div class="survey-score">' + item.score + ' <img src="../assets/' + smiles + '.png"</img></div>'+
+    '          </div>'+
+    '          <div class="survey-content">'+
+    '            <div class="survey-content-comments">Comments:</div>'+
+    '            <div class="survey-content-detail">' + item.answer + '</div>'+
+    '          </div>'+
+    '        </li>';
+
+    $('#survey-list-expanded').append(li_exp);
+  });
+}

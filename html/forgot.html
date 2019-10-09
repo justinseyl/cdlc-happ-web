@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forgot Password Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+    <script src="../js/env.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/signup.css">
+</head>
+<body>
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header-custom">
+				<div class="header-left">
+					<h3>Forgot Password?</h3>
+	        <hr class="under-line"/>
+				</div>
+				<div class="header-right">
+					<a href="login.html" class="header-button">Back</a>
+				</div>
+			</div>
+			<div class="card-body">
+			    <p id="confim-mess" style="display:none;">Email Sent! Please check your inbox for your temporary password.</p>
+				<form id="form_forgot_pass">
+                  <div class="recovery">
+                    <p>Please enter your email address below and we will send you a link to reset your password.</p>
+                  </div>
+					<div class="input-group form-group">
+						<input id="email-forgot" type="text" class="form-control" placeholder="Email Address">
+					</div>
+					<div class="submit-button">
+						<input type="button" value="SUBMIT" class="btn login_btn login-mobile" id="submit_forgot">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="footer">
+	<div class="footer-content text-center py-3">
+		OUR COMPANIES
+	</div>
+	<div class="footer-images reg">
+		<img src="../assets/c1.png">
+		<img src="../assets/c2.png">
+		<img src="../assets/c3.png">
+		<img src="../assets/c4.png">
+	</div>
+	<div class="footer-images mob">
+		<img src="../assets/c1-mob.png">
+		<img src="../assets/c2-mob.png">
+		<img src="../assets/c3-mob.png">
+		<img src="../assets/c4-mob.png">
+	</div>
+</footer>
+
+<script src="../js/index.js"></script>
+
+</body>
+</html>

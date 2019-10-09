@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../js/env.js"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/signup.css">
+</head>
+<body>
+<div class="container">
+	<p class="userexists" style="display:none;"> Oops, your login credentials were incorrect. Please try again or <a href="signup.html">sign up now!</a></p>
+	<div class="d-flex justify-content-center h-100">
+		<div class="card login">
+			<div class="card-header-custom">
+				<div class="header-left">
+					<h3>Log In</h3>
+	        <hr class="under-line"/>
+				</div>
+				<div class="header-right">
+					<a href="signup.html" class="header-button">Sign Up</a>
+				</div>
+			</div>
+			<div class="card-body">
+				<form id="loginform">
+					<div class="input-group form-group">
+						<input id="email" type="text" class="form-control" placeholder="Email Address">
+
+					</div>
+					<div class="input-group form-group">
+						<input id="pass" type="password" class="form-control" placeholder="Password">
+					</div>
+          <div class="custom-control custom-checkbox">
+            <input id="sessionId" class="cstm-control-input" type="checkbox" name="checkbox1" value="persist">
+            <label class="cstm-control-label">Stay signed in</label>
+          </div>
+          <div class="forgot-pass">
+            <a href="forgot.html">Forgot Password?</a>
+          </div>
+					<div class="submit-button">
+						<input type="submit" value="LOG IN" class="btn login_btn login-mobile" onclick="userLogIn()">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="cover" style="display:none;"></div>
+
+<footer class="footer">
+	<div class="footer-content text-center py-3">
+		OUR COMPANIES
+	</div>
+	<div class="footer-images reg">
+		<img src="../assets/c1.png">
+		<img src="../assets/c2.png">
+		<img src="../assets/c3.png">
+		<img src="../assets/c4.png">
+	</div>
+	<div class="footer-images mob">
+		<img src="../assets/c1-mob.png">
+		<img src="../assets/c2-mob.png">
+		<img src="../assets/c3-mob.png">
+		<img src="../assets/c4-mob.png">
+	</div>
+</footer>
+
+<script src="../js/logged-in.js"></script>
+<script src="../js/login.js"></script>
+
+</body>
+</html>

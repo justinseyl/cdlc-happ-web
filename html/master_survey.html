@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Main Survey</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../js/env.js"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/surveymain.css">
+</head>
+<body>
+<div id="confirm-popup" class="confirmpopip" style="display:none;">
+  <div class="container">
+  	<div class="d-flex justify-content-center h-100">
+  		<div class="card-signup">
+  			<div class="card-header-custom">
+  				<div class="header-left-tos">
+  					<h3>Are you sure?</h3>
+  	        <hr class="under-line"/>
+  				</div>
+  			</div>
+  			<div class="card-body-signup tos-body">
+  				<form id="signupform">
+  					<div class="tos-btn-container" style="margin-bottom:25px;">
+              <input value="GO BACK" class="survey-btn-prev" onclick="exitPopup()">
+              <input value="SUBMIT" class="survey-btn-nxt float-right" onclick="finalPopup()">
+  					</div>
+  				</form>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+</div>
+<div class="container">
+  <h1 class="title">Weekly Survey</h1>
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header-survey" id="survey-questions">
+
+			</div>
+			<div class="card-body">
+        <div class="result">
+          <ul class="result-ul">
+            <li class="result-li" value="1">
+              <img src="../assets/terr-smile.png">
+              <p>Terrible</p>
+            </li>
+            <li class="result-li" value="2">
+              <img src="../assets/bad-smile.png">
+              <p>Bad</p>
+            </li>
+            <li class="result-li" value="3">
+              <img src="../assets/ok-smile.png">
+              <p>Ok</p>
+            </li>
+            <li class="result-li" value="4">
+              <img src="../assets/good-smile.png">
+              <p>Good</p>
+            </li>
+            <li class="result-li" value="5">
+              <img src="../assets/awe-smile.png">
+              <p>Awesome</p>
+            </li>
+          </ul>
+        </div>
+        <div class="card-comments">
+          <div class="comment-label">Do you wish to add any comments?</div>
+          <form class="radio-comments">
+            <span class="radio-label">Yes </span><input type="radio" name="comments" value="yes" checked="checked">
+            <span class="radio-label-no">No </span><input type="radio" name="comments" value="no">
+
+            <textarea id="input_comments" class="comment-textarea" name="commenttext" rows="8" cols="80" placeholder="Enter comments here"></textarea>
+
+            <div class="survey-btn">
+              <input id="prev-survey" type="submit" value="PREVIOUS" class="survey-btn-prev">
+              <input id="next-survey" type="submit" value="NEXT" class="survey-btn-nxt">
+              <input id="complete-survey" type="submit" value="COMPLETE" class="survey-btn-nxt" style="display:none;" onclick="submit_survey()">
+              <input type="hidden" id="hiddenformid" name="formid" value="" />
+            </div>
+
+            <p class="error-text" style="display:none;">** Please select a rating above.</p>
+
+          </form>
+        </div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="cover" style="display:none;"></div>
+
+<footer class="footer">
+	<div class="footer-content text-center py-3">
+		OUR COMPANIES
+	</div>
+	<div class="footer-images reg">
+		<img src="../assets/c1.png">
+		<img src="../assets/c2.png">
+		<img src="../assets/c3.png">
+		<img src="../assets/c4.png">
+	</div>
+	<div class="footer-images mob">
+		<img src="../assets/c1-mob.png">
+		<img src="../assets/c2-mob.png">
+		<img src="../assets/c3-mob.png">
+		<img src="../assets/c4-mob.png">
+	</div>
+</footer>
+
+<div id="cover"></div>
+
+<script src="../js/only-logged-in.js"></script>
+<script src="../js/survey-main.js"></script>
+<script src="../js/completed-survey.js"></script>
+
+</body>
+</html>

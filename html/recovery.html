@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recovery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../js/env.js"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/signup.css">
+</head>
+<body>
+<div class="container">
+	<p class="userexistsno" style="display:none;"> Oops, something is not right. Please try again.</p>
+	<div class="d-flex justify-content-center h-100">
+		<div class="card-signup">
+			<div class="card-header-custom">
+				<div class="header-left">
+					<h3>Password Reset</h3>
+	        <hr class="under-line"/>
+				</div>
+			</div>
+			<div class="card-body-signup">
+				<form id="recoveryform">
+					<div class="input-group form-group">
+						<input id="email" type="text" class="form-control" placeholder="Email Address">
+					</div>
+					<div class="input-group form-group">
+						<input id="temppassword" type="password" class="form-control" placeholder="Temporary Password">
+					</div>
+					<div class="input-group form-group">
+						<input id="password" type="password" class="form-control" placeholder="New Password">
+					</div>
+					<div class="input-group form-group">
+						<input id="password2" type="password" class="form-control" placeholder="Re Enter New Password" onkeyup="checkPassword()">
+					</div>
+					<div class="submit-button signup">
+						<input type="button" value="SUBMIT" class="btn login_btn" onclick="setNewPass()">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="cover"></div>
+
+<footer class="footer">
+	<div class="footer-content text-center py-3">
+		OUR COMPANIES
+	</div>
+	<div class="footer-images reg">
+		<img src="../assets/c1.png">
+		<img src="../assets/c2.png">
+		<img src="../assets/c3.png">
+		<img src="../assets/c4.png">
+	</div>
+	<div class="footer-images mob">
+		<img src="../assets/c1-mob.png">
+		<img src="../assets/c2-mob.png">
+		<img src="../assets/c3-mob.png">
+		<img src="../assets/c4-mob.png">
+	</div>
+</footer>
+
+<script src="../js/index.js"></script>
+
+</body>
+</html>

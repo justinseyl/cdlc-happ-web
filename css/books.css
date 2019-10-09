@@ -1,0 +1,732 @@
+html, body {
+  -webkit-overflow-scrolling: touch;
+}
+
+@font-face {
+  font-family: 'MontserratLight';
+  font-weight: normal;
+  src: url('montserrat_light.eot');
+  src: url('montserrat_light.eot?#iefix') format('embedded-opentype'),
+       url('montserrat_light.woff2') format('woff2'),
+       url('montserrat_light.woff') format('woff'),
+       url('montserrat_light.ttf')  format('truetype'),
+}
+
+@font-face {
+  font-family: 'MontserratRegular';
+  font-weight: normal;
+  src: url('montserrat_regular.eot');
+  src: url('montserrat_regular.eot?#iefix') format('embedded-opentype'),
+       url('montserrat_regular.woff2') format('woff2'),
+       url('montserrat_regular.woff') format('woff'),
+       url('montserrat_regular.ttf')  format('truetype'),
+}
+
+.section-header h2 {
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #111816;
+  margin-bottom: 0px;
+}
+
+.after-header {
+  margin-left: 15px;
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #197858;
+  vertical-align: text-top;
+}
+
+.section-ul {
+  list-style: none;
+  padding: 0px;
+}
+
+.section-row {
+  width: 100%;
+  height: auto;
+  display: inline-flex;
+  padding: 10px 30px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px 0 rgba(160, 168, 198, 0.2);
+  border: solid 1px rgba(71, 103, 230, 0.04);
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.row-image {
+  width: 5%;
+}
+
+.book-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.row-content {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.row-content-inner {
+  width: 100%;
+}
+
+.row-content .row-content-inner h3 {
+    font-family: 'MontserratRegular', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: rgba(153, 161, 176, 0.6);
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.row-content .row-content-inner p {
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #111816;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.row-content .row-content-inner .view {
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #197858;
+  margin-top: 0px;
+  cursor: pointer;
+}
+
+.ratings .fa {
+  font-size: 16px;
+  color: #197858;
+  margin-left: 5px;
+}
+
+#main-header-label-paged {
+  cursor: pointer;
+}
+
+#main-header-label-paged h1 {
+  opacity: 0.8;
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #111816;
+  margin-left: 15px;
+}
+
+#main-header-label-paged img {
+  width: 24px;
+  height: 20px;
+  object-fit: contain;
+  opacity: 0.8;
+  vertical-align: text-bottom;
+}
+
+.book-inner {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+
+.book-header {
+  display: flex;
+}
+
+.book-image {
+  display: inline-block;
+}
+
+.book-title {
+  padding-left: 30px;
+  width: 100%;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.book-title-label {
+  opacity: 0.9;
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #111816;
+}
+
+.book-title-author {
+  padding-top: 6px;
+}
+
+.author-label {
+  opacity: 0.9;
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #111816;
+  display: inline-block;
+  padding-right: 40px;
+}
+
+.by {
+  padding-top: 15px;
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(153, 161, 176, 0.6);
+}
+
+.book-title-reviews {
+  padding-top: 0px;
+  padding-left: 40px;
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #197858;
+}
+
+.book-title-reviews-stars {
+  padding-top: 0px;
+  opacity: 0.8;
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #111816;
+  display: contents;
+  float: right;
+}
+
+.book-title .fa {
+  padding-left: 8px;
+  color: #197858;
+}
+
+.book-read-button {
+  width: 100%;
+  text-align: center;
+}
+
+.book-read {
+  margin-top: 29px;
+  width: 35%;
+  height: 35px;
+  border-radius: 6px;
+  background-color: rgba(209, 213, 232, 0.38);
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #197858;
+  border: none;
+  cursor: pointer;
+}
+
+.book-read:hover {
+  background-color: #197858;
+  color: white;
+}
+
+.book-content-desc {
+  padding-top: 25px;
+}
+
+.book-content-main {
+  word-break: break-all;
+}
+
+#all-reviews-section {
+  margin-top: 36px;
+}
+
+.review-all-elements {
+  border-radius: 6px;
+  box-shadow: 0 4px 12px 0 rgba(160, 168, 198, 0.2);
+  border: solid 1px rgba(71, 103, 230, 0.04);
+  background-color: #ffffff;
+  padding: 20px 30px;
+  display: inline-flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.review-all-left {
+  width: 25%;
+  display: inline-block;
+}
+
+.review-all-right {
+  width: 75%;
+  display: inline-block;
+}
+
+.all-item-header {
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(153, 161, 176, 0.6);
+  margin-bottom: 2px;
+}
+
+.all-item-content {
+  margin-bottom: 20px;
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #111816;
+}
+
+.all-item-content.last {
+  margin-bottom: 0px;
+}
+
+.all-item-title {
+  margin-bottom: 15px;
+  opacity: 0.9;
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #111816;
+}
+
+.all-item-desc {
+  opacity: 0.8;
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  color: #111816;
+}
+
+.all-item-content .fa {
+  font-size: 16px;
+  color: #197858;
+  margin-left: 5px;
+}
+
+.book-header-non {
+    height: 170px;
+}
+
+.books-listed {
+  vertical-align: text-top;
+  width: 32%;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.books-listed-admin {
+  vertical-align: text-top;
+  width: 32%;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+.book-inner-non {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.book-image-non {
+  display: inline-block;
+}
+
+.book-image-non img {
+  border-radius: 5px;
+  width: 100px;
+  height: 150px;
+}
+
+#completed-books-drill {
+  margin-top: 25px;
+}
+
+.book-title-reviews {
+  cursor: pointer;
+}
+
+.book-title-non {
+    padding-left: 20px;
+    width: calc(100% - 110px);
+    vertical-align: top;
+    display: inline-block;
+}
+
+.book-title-label-non {
+    opacity: 0.9;
+    font-family: 'MontserratRegular', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #111816;
+}
+
+.by-non {
+    padding-top: 11px;
+    font-family: 'MontserratRegular', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: rgba(153, 161, 176, 0.6);
+}
+
+#review-form {
+  margin-top: 15px;
+}
+
+.popup-label.stars {
+  margin-bottom: 12px;
+}
+
+.review-stars {
+  color: rgba(209, 213, 232, 0.58);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.review-stars.checked {
+  color: #197858;
+}
+
+.book-title-reviews-non {
+    width: 50%;
+    padding-top: 11px;
+    font-family: 'MontserratRegular', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #197858;
+    display: inline-block;
+}
+
+.book-title-reviews-stars-non {
+    padding-top: 11px;
+    opacity: 0.8;
+    font-family: 'MontserratRegular', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #111816;
+    width: 50%;
+    display: inline-block;
+    float: right;
+}
+
+.book-title-reviews-stars-non .fa {
+  color: #197858;
+}
+
+.book-content-desc-non {
+    padding-top: 15px;
+    font-family: 'MontserratRegular', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: rgba(153, 161, 176, 0.6);
+}
+
+.book-read-non {
+    margin-top: 29px;
+    width: 100%;
+    height: 35px;
+    border-radius: 6px;
+    font-family: 'MontserratRegular', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    background-color: #197858;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.book-read-admin {
+    margin-top: 29px;
+    width: 100%;
+    height: 35px;
+    font-family: 'MontserratRegular', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #197858;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: rgba(209, 213, 232, 0.38);
+}
+
+.books-listed {
+  margin-right: 10px;
+}
+
+.book-read-non:hover {
+  background-color: rgba(209, 213, 232, 0.38);
+  color: #197858;
+}
+
+.edit-book-img {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.edit-book-inner {
+  position: relative;
+}
+
+.edit-book-img img {
+  border-radius: 6px;
+  max-height: 220px;
+  width: auto;
+  margin: auto;
+  display: block;
+}
+
+.delete-book {
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #99a1b0;
+  margin-top: 25px;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+.edit-oval {
+  width: 32px;
+  height: 32px;
+  box-shadow: 0 5px 12px 0 rgba(153, 161, 176, 0.44);
+  background-color: #197858;
+  border-radius: 32px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.edit-oval img {
+  padding: 6px;
+}
+
+.icon-button {
+  display: inline-flex;
+  height: 40px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px 0 rgba(160, 168, 198, 0.2);
+  border: solid 1px rgba(17, 24, 22, 0.01);
+  background-color: #ffffff;
+  padding: 12px 15px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.icon-button p {
+  opacity: 0.9;
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #111816;
+}
+
+.icon-button i {
+  font-size: 16px !important;
+  margin-right: 12px;
+  color: #197858;
+}
+
+.add-book-img {
+  width: 180px;
+  height: 220px;
+  border-radius: 6px;
+  border: solid 1px #99a1b0;
+  background-color: #ffffff;
+  margin: auto;
+  padding-top: 75px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.add-book-img p {
+  font-family: 'MontserratRegular', sans-serif;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #111816;
+}
+
+.add-book-inner {
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  box-shadow: 0 5px 12px 0 rgba(153, 161, 176, 0.44);
+  background-color: #197858;
+  border-radius: 50px;
+  margin: auto;
+  text-align: center;
+}
+
+.add-book-inner i {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .books-listed {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .books-listed {
+    width: 100%;
+  }
+  .section-row {
+    padding: 15px;
+  }
+  .row-content {
+    margin-left: 0px;
+  }
+  .row-content .row-content-inner p {
+    white-space: normal;
+  }
+  .row-content-inner {
+    width: 90% !important;
+  }
+  #completed-books-drill {
+    margin-top: 15px;
+  }
+  .review-all-elements {
+    padding: 15px;
+    display: block;
+  }
+  .review-all-left,.review-all-right {
+    width: 100%;
+    display: block;
+  }
+  .all-item-header,.all-item-content {
+    display: inline-flex;
+    width: 100%;
+  }
+  .all-item-title {
+    margin-bottom: 8px;
+    opacity: 0.9;
+    font-family: 'MontserratRegular', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #111816;
+  }
+}
