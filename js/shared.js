@@ -240,6 +240,9 @@ function listSurveyQuestionsTest(data,day,time) {
   '            <select id="sch-time-test" class="form-control">'+
   '              <option value="month">Once Per Month</option>'+
   '              <option value="week">Once Per Week</option>'+
+  '              <option value="bi-week">Every Other Week</option>'+
+  '              <option value="ninty">Every 3 Months</option>'+
+  '              <option value="bi-yearly">Every 6 Months</option>'+
   '            </select>'+
   '          </div>'+
   '				</div>';
@@ -293,6 +296,9 @@ function listSurveyQuestions(data,day,time) {
   '            <select id="sch-time" class="form-control">'+
   '              <option value="month">Once Per Month</option>'+
   '              <option value="week">Once Per Week</option>'+
+  '              <option value="bi-week">Every Other Week</option>'+
+  '              <option value="ninty">Every 3 Months</option>'+
+  '              <option value="bi-yearly">Every 6 Months</option>'+
   '            </select>'+
   '          </div>'+
   '				</div>';
@@ -360,6 +366,37 @@ function addQuestion() {
   }
 }
 
+function addQuestionTest() {
+  if ($("#addnew-form-test").find( ".input-group:not(.sch-container)" ).length) {
+    var new_ques = $("#addnew-form-test").find( ".input-group:not(.sch-container)" ).last().find( "input" ).attr('id');
+    var s = new_ques.split('-').pop();
+
+    s = parseInt(s) + 1;
+
+    var html =
+    '<div class="input-group form-group">'+
+    '          <div class="ques">'+
+    '            <h1>Question ' + s + ':</h1>'+
+    '  					<input id="question-' + s + '" type="text" class="form-control" placeholder="Enter text here">'+
+    '            <span class="fa fa-trash-alt errspan" onclick="deleteQuestion(this)"></span>'+
+    '          </div>'+
+    '				</div>';
+
+    $('#addnew-form-test').append(html);
+  } else {
+    var html =
+    '<div class="input-group form-group">'+
+    '          <div class="ques">'+
+    '            <h1>Question 1:</h1>'+
+    '  					<input id="question-1" type="text" class="form-control" placeholder="Enter text here">'+
+    '            <span class="fa fa-trash-alt errspan" onclick="deleteQuestion(this)"></span>'+
+    '          </div>'+
+    '				</div>';
+
+    $('#addnew-form-test').append(html);
+  }
+}
+
   function submitNew() {
 
   var all = $("#addnew-form").find( ".input-group:not(.sch-container)" );
@@ -419,7 +456,7 @@ function addQuestion() {
 
 function submitNewTest() {
 
-var all = $("#addnew-form").find( ".input-group:not(.sch-container)" );
+var all = $("#addnew-form-test").find( ".input-group:not(.sch-container)" );
 var arr = [];
 
 $.each(all, function(i, item) {
@@ -445,8 +482,8 @@ $.ajax({
 
     contentType: "application/json",
     success: function(response) {
-      var day = $("#sch-day").val();
-      var time = $("#sch-time").val();
+      var day = $("#sch-day-test").val();
+      var time = $("#sch-time-test").val();
 
       $.ajax({
           url: environmentConfig + '/sendNewSchedule',

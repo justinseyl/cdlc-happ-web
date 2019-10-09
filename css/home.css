@@ -82,6 +82,16 @@ html, body {
   width: 50px;
 }
 
+.next-split {
+  width: 50%;
+  text-align: center;
+}
+
+.content-centered-next {
+  display: inline-flex;
+  width: 100%;
+}
+
 .new-container {
   width: 100%;
   height: 204px;
@@ -654,6 +664,15 @@ textarea {
 
 .innerdate {
   margin-top: 14px;
+  font-family: 'MontserratRegular', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #111816;
 }
 
 .next-small {

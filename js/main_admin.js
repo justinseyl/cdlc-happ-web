@@ -51,14 +51,15 @@ $.ajax({
 
 $.ajax({
     url: environmentConfig + '/get_schedule',
-    type: 'POST',
+    type: 'GET',
     contentType: "application/json",
-    data: JSON.stringify(
-      {
-        roletype: sessionStorage.getItem('cdlc-role')
-      }),
     success: function(response) {
-      $("#next_survey").html(response.nextrun)
+      console.log(response);
+      let res_man = response.find(o => o.id === 'manager');
+      let res_usr = response.find(o => o.id === 'user');
+      
+      $("#next_survey").html(res_man.nextrun);
+      $("#next_survey_usr").html(res_usr.nextrun);
     },
     error: function(err){
       console.log(err);
